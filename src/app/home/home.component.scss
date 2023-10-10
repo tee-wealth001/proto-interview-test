@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+    gap: 20px; /* Adjust the gap between grid items as needed */
+  }
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .duration-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* 70% black background */
+    color: white;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+  

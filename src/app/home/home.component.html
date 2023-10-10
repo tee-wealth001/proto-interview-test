@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="grid">
+    <div *ngFor="let item of corridorData" class="grid-item" [routerLink]="['/image-detail', item.id]">
+    <img [src]="getImageUrl(item)" alt="{{ item.title }}">
+    <div class="duration-box">
+        <span class="duration">{{ item.duration }}</span>
+    </div>
+    </div>
+</div>
