@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit{
     this.imageService.getImages().subscribe((data) => {
       
       this.corridorData = data;
-      this.corridorData = data.sort((a:any, b:any) => {
+      this.corridorData = data.filter((item:any) => item.images !== undefined).sort((a:any, b:any) => {
         return new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime();
       });
       this.getImageUrl(this.corridorData);
